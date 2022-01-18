@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "name": "Adesh Jadhav",
+      "email": "adesh@test.com",
+      "address": "Pune",
+      "phone": "5555555555",
+      "id": 1
+    },
+    {
+      "name": "Ajay Sharma",
+      "email": "ajay@test.com",
+      "address": "Gujrat",
+      "phone": "2222222222",
+      "id": 2
+    }
+  ]
+}

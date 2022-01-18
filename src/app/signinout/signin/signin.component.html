@@ -1,0 +1,40 @@
+<div *ngIf="error" class="container mt-5">
+  <div class="alert alert-danger" role="alert">
+    <strong class="ml-3">An error occurred! </strong>{{error}}
+  </div>
+</div>
+
+
+
+
+<section class="login">
+  <div class="container main-container">
+    <h1 class="text-center">{{loginMode? 'Sign In' : 'Sign Up'}}</h1>
+    
+    <form class="form-group m-4" [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="form-group mb-3 input-box">
+          <i class="fa fa-envelope"></i>
+          <input type="email"  #u1 aria-describedby="emailHelp" placeholder="Enter email" formControlName="email" >
+          
+        </div>
+        <div class="form-group mb-3 input-box">
+          <i class="fa fa-key"></i>
+          <input type="password"  #p2 placeholder="Password"  formControlName="password">
+          
+        </div>
+        <br>
+        <div class="form-group mb-3 mt-0 input-btn">
+        
+        <button  type="submit" class="btn btn-primary"  >{{loginMode? 'Sign In' : 'Sign Up'}}</button>
+        <br>
+        
+        </div>
+        
+         <div class="mb-3 input-btn">
+        <p class="mb-0 ">{{loginMode? 'Don`t have an account?' : 'Already have an account?'}}
+          <a class="pl-5 create" (click)="onModeSwitch()" >{{loginMode? 'Create One' : 'Sign In'}}</a>
+        </p>
+        </div>
+      </form>
+      </div>
+</section>

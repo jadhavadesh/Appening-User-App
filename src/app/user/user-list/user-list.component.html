@@ -1,0 +1,81 @@
+<form>
+   
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">User Name</th>
+                <th scope="col">User Email</th>
+                <th scope="col">User Address</th>
+                <th scope="col">User Phone number</th>
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of collection">
+                <th scope="row">{{item.id}}</th>
+                <td>{{item.name}}</td>
+                <td>{{item.email}}</td>
+                <td>{{item.address}}</td>
+                <td>{{item.phone}}</td>
+                <td>
+                    <i class="fa fa-trash p-2" style="color:red;font-size: 20px;" (click)="delete(item.id)" ></i>
+                    <a   data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="onEdit(item)"  id="cancel">
+                        <i class="fa fa-edit"  style="color:blue;font-size: 20px;padding: 10px;"></i>
+                      </a>
+                </td>
+              </tr>
+              
+            </tbody>
+          </table>
+        
+        <!-- delete request -->
+        
+    </div>
+
+    
+</form>
+
+
+
+<!-- Modal -->
+
+<div class="modal " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- <div class="modal-header">
+          
+        </div> -->
+        <div class="modal-body">
+          <h5 class="modal-title" id="exampleModalLabel">Update User</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+             <form [formGroup]="formValue">
+              <div class="mb-3 input-box">
+                <i class="fas fa-drumstick-bite"></i>
+                <input type="text"  id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="name" placeholder="Enter Name">
+              </div>
+              <div class="mb-3 input-box">
+                <i class="fas fa-envelope"></i>
+                <input type="email"  id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="email" placeholder="Enter email">
+              </div>
+              <div class="mb-3 input-box">
+                <i class="fas fa-location"></i>
+                <input type="text"  id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="address" placeholder="Enter address">
+              </div>
+              <div class="mb-3 input-box">
+                <i class="fas fa-phone"></i>
+                <input type="text"  id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="phone" placeholder="Enter mobile number">
+              </div>
+            </form> 
+            
+            
+           
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="btnClick()">Close</button>
+          <button type="button" class="btn btn-danger" (click)="updateUserDetails()">Update</button>
+        </div>
+      </div>
+    </div>
+  </div>

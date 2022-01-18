@@ -1,0 +1,51 @@
+
+  .modal{
+    background: rgba(0,0,0,0.8);
+}
+.modal-body{
+    background: rgba(0,0,0,0.8);
+}
+.input-box {
+    margin: 31px auto;
+    width: 80%;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid white;
+}
+.input-box input {
+    width: 90%;
+   outline: none;
+    border: none;
+    background: transparent;
+    color: #fff;
+}
+.fas {
+    margin-right: 10px;
+    color: white;
+}
+.modal-footer{
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+}
+.modal-header{
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+}
+.modal-title{
+    color: white;
+    justify-content: center;
+}
+
+.modal-backdrop.show {
+    opacity: 0 !important;
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+   
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+}

@@ -1,0 +1,43 @@
+.container {
+    width: 500px;
+    background: #fab8dd;
+    margin: 6% auto;
+    padding: 50px 0;
+    color: #fff;
+    box-shadow: 0 0 20px 2px rgba(0,0,0,0.5);
+}
+
+.input-box {
+    margin: 31px auto;
+    width: 80%;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid white;
+}
+.input-box input {
+    width: 90%;
+   outline: none;
+    border: none;
+    background: transparent;
+    color: #fff;
+}
+.fas {
+    margin-right: 10px;
+}
+.btn {
+    background: transparent;
+
+    border: 1px solid #fff;
+    width: 100%;
+    color: #fff;
+    outline: none;
+}
+::placeholder {
+    color:white;
+}
+.input-btn {
+    margin: 31px auto;
+    width: 80%;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
